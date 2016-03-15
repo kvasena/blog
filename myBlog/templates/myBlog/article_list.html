@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title> Blog </title>
+</head>
+<body>
+    <div>
+        <h1><a href="/">Blog</a></h1>
+    </div>
+
+    {% for article in articles %}
+        <div>
+            <p>published: {{ article.created }}</p>
+            <h1><a href="">{{ article.title }}</a></h1>
+            <p>{{ article.text|linebreaks }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
